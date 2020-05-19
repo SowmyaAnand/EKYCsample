@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar color="primary">
+
+    <ion-menu-button slot="start"></ion-menu-button>
+    <ion-title style="color: white; text-align: center;">Dashboard</ion-title>
+    
+  </ion-toolbar>
+
+  
+</ion-header>
+
+<ion-content>
+ 
+  
+<div class="ion-padding">
+  <ion-card >
+    <ion-card-header >
+      Bar Chart
+    </ion-card-header>
+    <ion-card-content >
+      <canvas #barCanvas></canvas>
+    </ion-card-content>
+  </ion-card>
+
+  </div>
+  <ion-list style="margin-top: 50px;">
+    <ion-item >
+      <ion-label style="color: rgba(255, 99, 132, 1); ">APPROVED</ion-label>
+      <ion-label style="text-align: end;color: rgba(255, 99, 132, 1)" slot="end">12</ion-label>
+    </ion-item>
+    <ion-item >
+      <ion-label  style="color: rgba(54, 162, 235, 1); ">Requirements</ion-label>
+      <ion-label style="text-align: end;color: rgba(54, 162, 235, 1)" lot="end">19</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label style="color: rgba(255, 206, 86, 1); ">Pending</ion-label>
+      <ion-label style="text-align: end;color: rgba(255, 206, 86, 1)" slot="end">8</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label style="color: rgba(75, 192, 192, 1); ">KYC WIP</ion-label>
+      <ion-label style="text-align: end;color: rgba(75, 192, 192, 1)" slot="end">5</ion-label>
+    </ion-item> 
+  </ion-list>
+  <ion-item lines="none" style="position: absolute;bottom:10px;text-align: start;">
+    <!-- <ion-button (click)="Dchart()">Doughnut Chart</ion-button> -->
+    <!-- <ion-button (click)="Lchart()">Line Chart</ion-button> -->
+    <ion-item lines="none" style="color: gray;" (click)="Dchart()">
+      <ion-icon name="pie-chart-outline"></ion-icon>
+    <ion-input >Doughnut</ion-input>
+   </ion-item>
+   <ion-item lines="none" style="color: gray;" (click)="Lchart()">
+    <ion-icon name="analytics-outline"></ion-icon>
+<ion-input >Linechart</ion-input>
+</ion-item>
+<ion-item lines="none" style="color: gray;" (click)="Bchart()">
+  <ion-icon name="bar-chart-outline"></ion-icon>
+<ion-input >Bargraph</ion-input>
+</ion-item>
+  </ion-item>
+</ion-content>
